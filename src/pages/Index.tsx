@@ -24,7 +24,7 @@ const Index = () => {
       <div className="hero-gradient px-4 py-8 -mt-px">
         <div className="flex flex-col items-center text-center">
           <div className="h-20 w-20 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center mb-4 animate-fade-in">
-            <img src={bfpLogo} alt="BFP Logo" className="h-14 w-14 object-contain" />
+            <img src={bfpLogo} alt="BFP Logo" className="h-14 w-14 object-cover rounded-full" />
           </div>
           <h2 className="font-display text-2xl font-bold text-primary-foreground mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Bureau of Fire Protection
