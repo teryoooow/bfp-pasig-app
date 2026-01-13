@@ -6,12 +6,12 @@ import {
   FileCheck,
   Building2,
   Ambulance,
+  Flame,
   Phone,
 } from "lucide-react";
 import PageContainer from "@/components/PageContainer";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
-import bfpLogo from "@/assets/bfp-logo.png";
 
 const Index = () => {
   const handleEmergencyCall = () => {
@@ -23,11 +23,9 @@ const Index = () => {
       {/* Hero Section */}
       <div className="hero-gradient px-4 py-8 -mt-px">
         <div className="flex flex-col items-center text-center">
-          <img 
-            src={bfpLogo} 
-            alt="Bureau of Fire Protection Logo" 
-            className="h-20 w-20 object-contain mb-4 animate-fade-in"
-          />
+          <div className="h-20 w-20 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center mb-4 animate-fade-in">
+            <Flame className="h-10 w-10 text-primary-foreground" />
+          </div>
           <h2 className="font-display text-2xl font-bold text-primary-foreground mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Bureau of Fire Protection
           </h2>
