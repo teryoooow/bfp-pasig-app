@@ -15,7 +15,13 @@ const ServiceCard = ({ icon: Icon, title, description, path, variant = "default"
 
   return (
     <button
-      onClick={() => navigate(path)}
+      onClick={() => {
+        if (path.startsWith("http")) {
+          window.open(path, "_blank");
+        } else {
+          navigate(path);
+        }
+      }}
       className={cn(
         "w-full flex items-center gap-4 p-4 rounded-xl card-elevated text-left transition-all duration-200",
         variant === "default" && "bg-card",

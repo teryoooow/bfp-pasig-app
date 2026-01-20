@@ -13,6 +13,8 @@ import Substations from "./pages/Substations";
 import EmsSrf from "./pages/EmsSrf";
 import More from "./pages/More";
 import NotFound from "./pages/NotFound";
+import Complaint from "./pages/Complaint";
+import Education from "./pages/Education";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/ems-srf" element={<EmsSrf />} />
           <Route path="/contacts" element={<Substations />} />
           <Route path="/more" element={<More />} />
+          <Route path="/complaint" element={<Complaint />} />
+          <Route path="/education" element={<Education />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

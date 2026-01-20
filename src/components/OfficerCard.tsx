@@ -13,12 +13,12 @@ const OfficerCard = ({ name, position, rank, image }: OfficerCardProps) => {
 
   return (
     <div className="bg-card rounded-xl p-4 card-elevated flex items-center gap-4">
-      <div className="h-16 w-16 rounded-full bg-secondary flex items-center justify-center shrink-0 overflow-hidden">
+      <div className="h-16 w-16 rounded-xl bg-secondary flex items-center justify-center shrink-0 overflow-hidden">
         {image && !imageError ? (
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover rounded-full"
+            className="h-full w-full object-cover rounded-xl"
             onError={() => setImageError(true)}
           />
         ) : (

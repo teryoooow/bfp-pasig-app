@@ -7,6 +7,7 @@ interface PageContainerProps {
   title?: string;
   showHeader?: boolean;
   showNav?: boolean;
+  showBack?: boolean;
 }
 
 const PageContainer = ({
@@ -14,10 +15,11 @@ const PageContainer = ({
   title,
   showHeader = true,
   showNav = true,
+  showBack = false,
 }: PageContainerProps) => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {showHeader && <MobileHeader title={title} />}
+      {showHeader && <MobileHeader title={title} showBack={showBack} />}
       <main className="flex-1 pb-24 overflow-y-auto">{children}</main>
       {showNav && <BottomNav />}
     </div>
