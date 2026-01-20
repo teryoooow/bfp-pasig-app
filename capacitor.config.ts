@@ -1,15 +1,14 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'app.lovable.388f5555f23c413fa1aeacaba6f775fa',
+  appId: 'bfp.taguig.connect',
   appName: 'BFP Connect',
   webDir: 'dist',
-  
-  // Development server configuration for hot-reload
-  server: {
-    url: 'https://388f5555-f23c-413f-a1ae-acaba6f775fa.lovableproject.com?forceHideBadge=true',
-    cleartext: true
-  },
+  /**
+   * For production builds we load bundled assets from /dist.
+   * To use remote dev server, temporarily add a server.url and rerun `npx cap sync`.
+   */
+  server: undefined,
 
   // iOS-specific configuration
   ios: {
@@ -32,6 +31,14 @@ const config: CapacitorConfig = {
     loggingBehavior: 'production',
     initialFocus: true,
     buildOptions: {
+      /**
+       * Set your release signing config (used by `./gradlew bundleRelease`).
+       * Example:
+       * keystorePath: '/path/to/keystore.jks',
+       * keystorePassword: '***',
+       * keystoreAlias: 'my-key-alias',
+       * keystoreAliasPassword: '***'
+       */
       keystorePath: undefined,
       keystorePassword: undefined,
       keystoreAlias: undefined,

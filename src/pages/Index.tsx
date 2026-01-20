@@ -15,7 +15,7 @@ import bfpLogo from "@/assets/bfp-logo.png";
 
 const Index = () => {
   const handleEmergencyCall = () => {
-    window.location.href = "tel:911";
+    window.location.href = "tel:+63 906 211 0919";
   };
 
   return (
@@ -40,7 +40,7 @@ const Index = () => {
             style={{ animationDelay: "0.3s" }}
           >
             <Phone className="h-5 w-5" />
-            Emergency: 911
+            Emergency Hotline
           </Button>
         </div>
       </div>

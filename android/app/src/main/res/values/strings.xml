@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BFP Connect</string>
+    <string name="title_activity_main">BFP Connect</string>
+    <string name="package_name">bfp.taguig.connect</string>
+    <string name="custom_url_scheme">bfp.taguig.connect</string>
+</resources>
