@@ -4,7 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 
 const More = () => {
   return (
-    <PageContainer title="More">
+    <PageContainer title="More" showBack={true}>
       <div className="px-4 py-6 space-y-6">
         <div className="space-y-3">
           <ServiceCard
@@ -13,7 +13,7 @@ const More = () => {
             description="Our goals and commitments"
             path="/vision-mission"
           />
-          
+
           <ServiceCard
             icon={BookHeart}
             title="Fireman's Prayer"

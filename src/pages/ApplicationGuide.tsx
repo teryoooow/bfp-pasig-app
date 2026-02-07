@@ -98,7 +98,7 @@ const ApplicationGuide = () => {
   const defaultTab = searchParams.get("tab") || "fsec";
 
   return (
-    <PageContainer title="Application Guide">
+    <PageContainer title="Application Guide" showBack={true}>
       <div className="px-4 py-6">
         <Tabs defaultValue={defaultTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-6">

@@ -7,30 +7,14 @@ const emsContacts = [
   {
     name: "BFP Emergency Medical Services",
     phone: "911",
-  },
-  {
-    name: "Taguig City EMS Hotline",
-    phone: "(02) 8789-1234",
-  },
-  {
-    name: "BFP Rescue Hotline",
-    phone: "(02) 8426-0219",
-  },
+  }
 ];
 
 const srfContacts = [
   {
-    name: "Search and Rescue Unit",
-    phone: "(02) 8838-7890",
-  },
-  {
     name: "Special Rescue Force Hotline",
     phone: "(02) 8838-8901",
-  },
-  {
-    name: "Water Search and Rescue",
-    phone: "(02) 8838-9012",
-  },
+  }
 ];
 
 const EmsSrf = () => {
@@ -39,7 +23,7 @@ const EmsSrf = () => {
   };
 
   return (
-    <PageContainer title="EMS & SRF">
+    <PageContainer title="EMS & SRF" showBack={true}>
       <div className="px-4 py-6 space-y-6">
         {/* Emergency Banner */}
         <div className="emergency-gradient rounded-xl p-6 text-center animate-fade-in">
@@ -94,7 +78,7 @@ const EmsSrf = () => {
               <LifeBuoy className="h-5 w-5 text-secondary" />
             </div>
             <h3 className="font-display font-semibold text-foreground">
-              Search & Rescue Force
+              Special Rescue Force
             </h3>
           </div>
           <div className="space-y-3">
