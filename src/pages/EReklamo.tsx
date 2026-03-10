@@ -1,6 +1,6 @@
 import PageContainer from "@/components/PageContainer";
 import bfpLogo from "@/assets/bfp-logo-reklamo-v2.png";
-import bfpTaguig from "@/assets/bfp-taguig-logo.jpg";
+import bfpTaguig from "@/assets/bfp-pasig-logo.jpg";
 import dilgLogo from "@/assets/dilg-logo.png";
 import bagongPilipinasLogo from "@/assets/bagong-pilipinas-logo.png";
 import { Mail, Facebook, Phone, Globe } from "lucide-react";
@@ -8,9 +8,8 @@ import QRCode from "react-qr-code";
 
 const EReklamo = () => {
     return (
-        <PageContainer title="" showBack={true} className="bg-[#0b162a]">
-            <div className="min-h-full flex flex-col items-center px-4 py-6 relative overflow-hidden bg-[#0b162a] w-full">
-                {/* Background Overlay */}
+        <PageContainer title="" showBack={true}>
+            <div className="min-h-full flex flex-col items-center px-4 py-6 relative overflow-hidden bg-[#012044] w-full">
                 <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-500 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
                     <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
@@ -40,7 +39,7 @@ const EReklamo = () => {
                         <img src={bfpLogo} alt="BFP Logo" className="w-20 h-20 object-contain drop-shadow-lg" />
 
                         {/* BFP Taguig Logo */}
-                        <img src={bfpTaguig} alt="BFP Taguig Logo" className="w-20 h-20 object-contain rounded-full drop-shadow-lg" />
+                        <img src={bfpTaguig} alt="BFP Pasig Logo" className="w-20 h-20 object-contain rounded-full drop-shadow-lg" />
 
                         {/* Placeholder for Bagong Pilipinas */}
                         {/* Bagong Pilipinas Logo */}
@@ -59,28 +58,28 @@ const EReklamo = () => {
                         {/* Contact Methods */}
                         <div className="space-y-4 max-w-sm mx-auto">
                             <a href="mailto:complaints@bfp.gov.ph" className="flex items-center gap-4 group p-1 transition-colors">
-                                <div className="bg-[#0b162a] p-2 rounded-full shrink-0">
+                                <div className="bg-[#012044] p-2 rounded-full shrink-0">
                                     <Mail className="w-5 h-5 text-white" />
                                 </div>
                                 <span className="text-[#ea4335] font-bold text-lg text-left break-all">complaints@bfp.gov.ph</span>
                             </a>
 
                             <a href="https://www.facebook.com/DILGBFP" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-1 transition-colors">
-                                <div className="bg-[#0b162a] p-2 rounded-full shrink-0">
+                                <div className="bg-[#012044] p-2 rounded-full shrink-0">
                                     <Facebook className="w-5 h-5 text-white" />
                                 </div>
                                 <span className="text-[#ea4335] font-bold text-lg text-left">Bureau of Fire Protection</span>
                             </a>
 
                             <a href="tel:8888" className="flex items-center gap-4 group p-1 transition-colors">
-                                <div className="bg-[#0b162a] p-2 rounded-full shrink-0">
+                                <div className="bg-[#012044] p-2 rounded-full shrink-0">
                                     <Phone className="w-5 h-5 text-white" />
                                 </div>
                                 <span className="text-[#ea4335] font-bold text-lg text-left">8888</span>
                             </a>
 
                             <a href="https://bfp.gov.ph/complaint-form" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-1 transition-colors">
-                                <div className="bg-[#0b162a] p-2 rounded-full shrink-0">
+                                <div className="bg-[#012044] p-2 rounded-full shrink-0">
                                     <Globe className="w-5 h-5 text-white" />
                                 </div>
                                 <span className="text-[#ea4335] font-bold text-sm sm:text-lg text-left break-all">bfp.gov.ph/complaint-form</span>
@@ -92,9 +91,10 @@ const EReklamo = () => {
                     <div className="border-[3px] border-dotted border-[#FFC107] rounded-3xl p-6 mx-4 relative flex flex-col items-center gap-6">
                         <div className="text-center space-y-1">
                             <h2 className="text-white font-bold text-2xl">Do you want to file a complaint?</h2>
-                            <p className="text-white/90 text-lg">Scan the QR Code below</p>
+                            <p className="text-muted-foreground text-sm mb-6">
+                                Scan the QR code below or use the provided link to submit a complaint or report to the BFP Pasig City Fire Station.
+                            </p>
                         </div>
-
                         <div className="bg-white p-2 rounded-xl border-4 border-[#FFC107] shadow-lg">
                             <div className="bg-white p-1">
                                 <QRCode value="https://bfp.gov.ph/complaint-form" size={150} />
@@ -104,7 +104,7 @@ const EReklamo = () => {
 
                 </div>
             </div>
-        </PageContainer>
+        </PageContainer >
     );
 };
 

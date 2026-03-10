@@ -2,6 +2,7 @@ import { FileCheck, AlertCircle } from "lucide-react";
 import PageContainer from "@/components/PageContainer";
 import StepCard from "@/components/StepCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useSearchParams } from "react-router-dom";
 
 const fsecSteps = [
@@ -23,7 +24,7 @@ const fsecSteps = [
   },
   {
     title: "Select Fire Station",
-    description: "On the Fire Station Section, Please Select \"TAGUIG CITY FIRE STATION\"",
+    description: "On the Fire Station Section, Please Select \"PASIG CITY FIRE STATION\"",
   },
   {
     title: "Submit & Upload",
@@ -93,6 +94,57 @@ const fsicRenewalRequirements = [
   "Photocopy of ID of owner or representative",
 ];
 
+const foggingRequirements = [
+  "Application Form and Letter Request",
+  "Operational License for Fumigators (FPA)",
+  "List of Fumigants or insecticides and thermal devices to be used",
+  "Photocopy of Official Receipt of Payment",
+  "Photocopy of I.D. of persons involved and applicant",
+  "Photocopy of Safety Seminar Certificate for Fogging"
+];
+
+const conveyanceRequirements = [
+  "Business Permit (Photocopy)",
+  "Picture of the Vehicle",
+  "Fire Extinguisher Receipt (Photocopy)",
+  "Checklist",
+  "Updated OR/CR (Photocopy)",
+  "Valid Driver's License (Photocopy)",
+  "Calibration of the Vehicle (Record)"
+];
+
+const storageRequirements = [
+  "Certification of Itemized Product from Business Establishment",
+  "Certificate of Storage Tank Capacity (for Gasoline Station Only)",
+  "Business Permit or Tax Order of Payment (Photocopy)",
+  "Storage Area (Picture Only)",
+  "Fire Extinguisher Receipt (Photocopy)",
+  "SDS (Safety Data Sheet)"
+];
+
+const fireworksRequirements = [
+  "Application Form and Letter Request",
+  "Barangay Clearance (Photocopy)",
+  "License to Manufacture Firecrackers & Pyrotechnic Devices (Photocopy)",
+  "License for Fireworks Display Operator (Photocopy)",
+  "Picture of the Area with Standby Fire Extinguisher",
+  "Official Receipt of Payment (Photocopy)",
+  "Photocopy of I.D of applicant",
+  "Safety Seminar Certificate for Fireworks Display (Photocopy)"
+];
+
+const seminarRequirementsBefore = [
+  "Request Letter",
+  "Tax Order of Payment of Company (Photocopy)",
+  "Payment for Seminar Php 2,000.00",
+  "Payment for Fire Drill Php 1,000.00 (Online Payment)"
+];
+
+const seminarRequirementsAfter = [
+  "Picture of the Actual Seminar",
+  "Attendance of Participants"
+];
+
 const ApplicationGuide = () => {
   const [searchParams] = useSearchParams();
   const defaultTab = searchParams.get("tab") || "fsec";
@@ -101,9 +153,10 @@ const ApplicationGuide = () => {
     <PageContainer title="Application Guide" showBack={true}>
       <div className="px-4 py-6">
         <Tabs defaultValue={defaultTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-6">
-            <TabsTrigger value="fsec" className="font-semibold">FSEC</TabsTrigger>
-            <TabsTrigger value="fsic" className="font-semibold">FSIC</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 mb-6">
+            <TabsTrigger value="fsec" className="font-semibold text-xs sm:text-sm">FSEC</TabsTrigger>
+            <TabsTrigger value="fsic" className="font-semibold text-xs sm:text-sm">FSIC</TabsTrigger>
+            <TabsTrigger value="others" className="font-semibold text-xs sm:text-sm">Others</TabsTrigger>
           </TabsList>
 
           <TabsContent value="fsec" className="space-y-6">
@@ -164,7 +217,7 @@ const ApplicationGuide = () => {
             <div className="bg-card rounded-xl p-4 card-elevated mt-6">
               <h3 className="font-display font-semibold text-foreground mb-3">Process Note</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Once your online application is received and validated, you can make your payment through LANDBANK, PAYMAYA, or BDO APP on our website (please check the status, payment details, and exact payment process on our website). After payment online please submit the HARD COPIES OF DOCUMENTS to our BFP Taguig City Hall Office or BFP SM AURA Satelite Office for proper evaluation of documents of in-charge Fire Safety Evaluator. After evaluation of plans and check if it is compliant according to the guideline of RA 9514 Fire Code of the Philippines, the Fire Safety Evaluator will forward to Chief, Plan Evaluator for recommendation of issuance of FSEC. The Chief, Plan Evaluator will verify the application after verification he/she will forward to Chief, Fire Prevention Section recommending issuance of FSEC, After receiving the recommendation from Chief, Plan Evaluator, the Chief, Fire Prevention Section will endorse recommending approval of FSEC to City Fire Marshal, After receiving the recommendation from Chief Fire Prevention Section, the City Fire Marshal will issue FSEC.
+                Once your online application is received and validated, you can make your payment through LANDBANK, PAYMAYA, or BDO APP on our website (please check the status, payment details, and exact payment process on our website). After payment online please submit the HARD COPIES OF DOCUMENTS to our BFP Pasig City Hall Office or designated Satellite Office for proper evaluation of documents of in-charge Fire Safety Evaluator. After evaluation of plans and check if it is compliant according to the guideline of RA 9514 Fire Code of the Philippines, the Fire Safety Evaluator will forward to Chief, Plan Evaluator for recommendation of issuance of FSEC. The Chief, Plan Evaluator will verify the application after verification he/she will forward to Chief, Fire Prevention Section recommending issuance of FSEC, After receiving the recommendation from Chief, Plan Evaluator, the Chief, Fire Prevention Section will endorse recommending approval of FSEC to City Fire Marshal, After receiving the recommendation from Chief Fire Prevention Section, the City Fire Marshal will issue FSEC.
               </p>
             </div>
           </TabsContent>
@@ -249,6 +302,113 @@ const ApplicationGuide = () => {
                   </div>
                 </TabsContent>
               </Tabs>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="others" className="space-y-6">
+            <div className="bg-card rounded-xl p-4 card-elevated">
+              <div className="flex items-center gap-3 mb-3">
+                <FileCheck className="h-6 w-6 text-primary" />
+                <h2 className="font-display font-bold text-foreground">
+                  Other Clearances & Permits
+                </h2>
+              </div>
+              <p className="text-sm text-muted-foreground mb-6">
+                Requirements for special permits, conveyances, and seminars.
+              </p>
+
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="fogging">
+                  <AccordionTrigger className="text-left font-semibold">Fogging</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 mt-2">
+                      {foggingRequirements.map((req, index) => (
+                        <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs font-semibold text-primary mt-4">NOTE: INCOMPLETE REQUIREMENTS WILL NOT BE ACCEPTED</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="conveyance">
+                  <AccordionTrigger className="text-left font-semibold">Conveyance</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 mt-2">
+                      {conveyanceRequirements.map((req, index) => (
+                        <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs font-semibold text-primary mt-4">NOTE: INCOMPLETE REQUIREMENTS WILL NOT BE ACCEPTED</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="storage">
+                  <AccordionTrigger className="text-left font-semibold">Storage</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 mt-2">
+                      {storageRequirements.map((req, index) => (
+                        <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs font-semibold text-primary mt-4">NOTE: INCOMPLETE REQUIREMENTS WILL NOT BE ACCEPTED</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="fireworks">
+                  <AccordionTrigger className="text-left font-semibold">Fireworks Display</AccordionTrigger>
+                  <AccordionContent>
+                    <ul className="space-y-2 mt-2">
+                      {fireworksRequirements.map((req, index) => (
+                        <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs font-semibold text-primary mt-4">NOTE: INCOMPLETE REQUIREMENTS WILL NOT BE ACCEPTED</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="seminar">
+                  <AccordionTrigger className="text-left font-semibold">Fire Safety Seminar and Drill</AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 mt-2">
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2 text-foreground">Before the Conduct of Seminar</h4>
+                        <ul className="space-y-2">
+                          {seminarRequirementsBefore.map((req, index) => (
+                            <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                              <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                              {req}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="pt-2 border-t">
+                        <h4 className="font-semibold text-sm mb-2 text-foreground">After the Conduct of Seminar</h4>
+                        <ul className="space-y-2">
+                          {seminarRequirementsAfter.map((req, index) => (
+                            <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                              <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
+                              {req}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p className="text-xs font-semibold text-primary mt-4">NOTE: INCOMPLETE REQUIREMENTS WILL NOT BE ACCEPTED</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </TabsContent>
         </Tabs>

@@ -31,11 +31,11 @@ const More = () => {
             <h3 className="font-display font-semibold text-foreground">About This App</h3>
           </div>
           <p className="text-sm text-muted-foreground mb-4">
-            This mobile application is developed for the Bureau of Fire Protection - Taguig City to provide citizens easy access to fire safety information, services, and emergency contacts.
+            This mobile application is developed for the Bureau of Fire Protection - Pasig City to provide citizens easy access to fire safety information, services, and emergency contacts.
           </p>
           <div className="text-xs text-muted-foreground">
             <p>Version 1.0.0</p>
-            <p>© 2024 BFP Taguig City</p>
+            <p>© 2024 BFP Pasig City</p>
           </div>
         </div>
 

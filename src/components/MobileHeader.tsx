@@ -6,7 +6,7 @@ interface MobileHeaderProps {
   showBack?: boolean;
 }
 
-const MobileHeader = ({ title = "BFP Taguig", showBack = false }: MobileHeaderProps) => {
+const MobileHeader = ({ title = "BFP Pasig", showBack = false }: MobileHeaderProps) => {
   const navigate = useNavigate();
 
   return (

@@ -23,9 +23,9 @@ import s11Commander from "@/assets/substations/s11_commander.jpg";
 
 export const substations = [
     {
-        id: "taguig-cfs",
-        name: "TAGUIG CFS",
-        address: "RADIAN ST., ARCA SOUTH, BRGY. WESTERN BICUTAN, TAGUIG CITY",
+        id: "pasig-cfs",
+        name: "PASIG CFS",
+        address: "RADIAN ST., ARCA SOUTH, BRGY. WESTERN BICUTAN, PASIG CITY",
         phone: "0906-211-0919",
         description: "The main headquarters overseeing fire prevention and suppression activities.",
         stationImage: s1Station,
@@ -35,7 +35,7 @@ export const substations = [
     {
         id: "central-signal-fs",
         name: "CENTRAL SIGNAL FS",
-        address: "COL. BALLECER ST., ZONE 3, BRGY. CENTRAL SIGNAL, TAGUIG CITY",
+        address: "COL. BALLECER ST., ZONE 3, BRGY. CENTRAL SIGNAL, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving the Central Signal area.",
         stationImage: s2Station,
@@ -45,7 +45,7 @@ export const substations = [
     {
         id: "tipas-fs",
         name: "TIPAS FS",
-        address: "59A DR. NATIVIDAD COR ELISCO RD., BRGY. IBAYO TIPAS, TAGUIG CITY",
+        address: "59A DR. NATIVIDAD COR ELISCO RD., BRGY. IBAYO TIPAS, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving the Tipas area.",
         stationImage: s3Station,
@@ -55,7 +55,7 @@ export const substations = [
     {
         id: "bagumbayan-fs",
         name: "BAGUMBAYAN FS",
-        address: "276 M.L. QUEZON ST., BRGY. BAGUMBAYAN, TAGUIG CITY",
+        address: "276 M.L. QUEZON ST., BRGY. BAGUMBAYAN, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Brgy. Bagumbayan.",
         stationImage: s4Station,
@@ -65,7 +65,7 @@ export const substations = [
     {
         id: "north-signal-fs",
         name: "NORTH SIGNAL FS",
-        address: "5TH ST., CORNER MANGA ROAD, NORTH SIGNAL, TAGUIG CITY",
+        address: "5TH ST., CORNER MANGA ROAD, NORTH SIGNAL, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving North Signal.",
         stationImage: s5Station,
@@ -75,7 +75,7 @@ export const substations = [
     {
         id: "palingon-fss",
         name: "PALINGON FSS",
-        address: "62 F. MANALO ST., BRGY. PALINGON TIPAS, TAGUIG CITY",
+        address: "62 F. MANALO ST., BRGY. PALINGON TIPAS, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Palingon Tipas.",
         stationImage: s6Station,
@@ -85,7 +85,7 @@ export const substations = [
     {
         id: "wawa-fs",
         name: "WAWA FS",
-        address: "MRF, BRGY. SAN MIGUEL, TAGUIG CITY",
+        address: "MRF, BRGY. SAN MIGUEL, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Brgy. San Miguel.",
         stationImage: s7Station,
@@ -95,7 +95,7 @@ export const substations = [
     {
         id: "cuasay-fs",
         name: "CUASAY FS",
-        address: "CUASAY COR. BAYANI RD., BRGY. PINAGSAMA, TAGUIG CITY",
+        address: "CUASAY COR. BAYANI RD., BRGY. PINAGSAMA, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Brgy. Pinagsama.",
         stationImage: s8Station,
@@ -105,7 +105,7 @@ export const substations = [
     {
         id: "west-rembo-fs",
         name: "WEST REMBO FS",
-        address: "J.P. RIZAL EXTENSION, BRGY. WEST REMBO, TAGUIG CITY",
+        address: "J.P. RIZAL EXTENSION, BRGY. WEST REMBO, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving West Rembo.",
         stationImage: s9Station,
@@ -115,7 +115,7 @@ export const substations = [
     {
         id: "comembo-fs",
         name: "COMEMBO FS",
-        address: "ANAHAW ST., BRGY. COMEMBO, TAGUIG CITY",
+        address: "ANAHAW ST., BRGY. COMEMBO, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Brgy. Comembo.",
         stationImage: s10Station,
@@ -125,7 +125,7 @@ export const substations = [
     {
         id: "maharlika-fs",
         name: "MAHARLIKA FS",
-        address: "MINDANAO AVE. INFRONT OF BLUEMOSQUE, BARANGAY MAHARLIKA, TAGUIG CITY",
+        address: "MINDANAO AVE. INFRONT OF BLUEMOSQUE, BARANGAY MAHARLIKA, PASIG CITY",
         phone: "0906-211-0919",
         description: "Serving Brgy. Maharlika.",
         stationImage: s11Station,

@@ -62,7 +62,7 @@ const Complaint = () => {
     );
 
     // Open default email client
-    window.location.href = `mailto:bfp.taguig@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:complaints@bfp.gov.ph?subject=${subject}&body=${body}`;
 
     toast.success("Opening email client...", {
       description: "Please attach photos if you have them, then press Send.",
@@ -72,9 +72,9 @@ const Complaint = () => {
   return (
     <PageContainer title="Report Hazard" showBack>
       <div className="px-4 py-6 space-y-6">
-        <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 text-sm text-orange-800">
-          <p className="font-semibold">⚠️ Emergency?</p>
-          <p>If there is an active fire or immediate danger, do not use this form. Call the hotline immediately.</p>
+        <div className="bg-orange-50/50 border border-orange-100 rounded-lg p-4 mb-4">
+          <h3 className="font-semibold text-orange-900 mb-2">Pasig City Fire Station</h3>
+          <p className="text-sm text-orange-800">If there is an active fire or immediate danger, do not use this form. Call the hotline immediately.</p>
         </div>
 
         <Form {...form}>

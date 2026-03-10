@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'bfp.taguig.connect',
+  appId: 'bfp.pasig.connect',
   appName: 'BFP Connect',
   webDir: 'dist',
   /**

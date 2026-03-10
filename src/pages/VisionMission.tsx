@@ -13,7 +13,7 @@ const VisionMission = () => {
         <div className="relative overflow-hidden rounded-xl p-6 card-elevated animate-fade-in group">
           <div className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105">
             <img src={visionBg} alt="Vision Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-red-950/80 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-blue-950/80 mix-blend-multiply"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
           </div>
 
