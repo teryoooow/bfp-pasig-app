@@ -38,6 +38,11 @@ const officers = [
     position: "Chief, Plans Evaluation Unit",
     rank: "Fire Inspector",
   },
+  {
+    name: "FINSP JULIUS RAMIREZ",
+    position: "Station Commander",
+    rank: "Fire Inspector",
+  },
 ];
 
 const Officers = () => {
@@ -45,7 +50,7 @@ const Officers = () => {
     <PageContainer title="Key Officers" showBack={true}>
       <div className="px-4 py-6">
         <p className="text-muted-foreground text-sm mb-6">
-          Meet the dedicated leaders of BFP Taguig City Fire Station committed to protecting our community.
+          Meet the dedicated leaders of BFP Pasig City Fire Station committed to protecting our community.
         </p>
 
         <div className="space-y-3">
