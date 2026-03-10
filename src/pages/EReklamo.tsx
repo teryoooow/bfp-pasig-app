@@ -64,7 +64,7 @@ const EReklamo = () => {
                                 <span className="text-[#ea4335] font-bold text-lg text-left break-all">complaints@bfp.gov.ph</span>
                             </a>
 
-                            <a href="https://www.facebook.com/DILGBFP" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-1 transition-colors">
+                            <a href="https://www.facebook.com/profile.php?id=61566565531177" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group p-1 transition-colors">
                                 <div className="bg-[#012044] p-2 rounded-full shrink-0">
                                     <Facebook className="w-5 h-5 text-white" />
                                 </div>

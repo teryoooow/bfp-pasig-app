@@ -181,7 +181,7 @@ const Index = () => {
           icon={Facebook}
           title="Official Facebook Page"
           description="Follow us for updates & news"
-          path="https://www.facebook.com/DILGBFP"
+          path="https://www.facebook.com/profile.php?id=61566565531177"
         />
       </div>
     </PageContainer >
